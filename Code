@@ -1,0 +1,126 @@
+<Food Ordering Apps>
+
+//System Process : Main_Program
+begin
+    character cYa = "Ya";
+    numeric nTotal = 0
+    display "Selamat datang di Warteg Digital"
+    while (cYa = "Ya/Y" )
+        call Pilihan_Menu 
+        display "Melakukan transaksi yang lain? (Ya/Tidak)"
+        accept cYa ("Ya/Y")
+    end
+    display "Total transaksi : ",nTotal
+end
+
+//System Process : Pilihan_Menu
+procedure Pilihan_Menu
+begin
+numeric nHarga, nPorsi, nPilihMenu, nSubtotal
+display "            Pilihan Menu                "
+display " ====================================== "
+display " 1. Sambal goreng kentang || Rp.  3.000 "
+display " 2. Ayam goreng           || Rp. 10.000 "
+display " 3. Sayur kangkung        || Rp.  3.000 "        
+display " 4. Telur dadar           || Rp.  4.000 "          
+display " 5. Ikan tuna balado      || Rp.  9.000 "     
+display " 6. Perkedel              || Rp.  2.000 "             
+display " 7. Sayur sop             || Rp.  3.000 "           
+display " 8. Nasi putih            || Rp.  3.000 "           
+display " 9. Es teh                || Rp.  3.000 "              
+display " 10.Es jeruk              || Rp.  5.000 "          
+display " ====================================== "
+display " Harga tersebut merupakan harga/porsi   "
+accept nPilihMenu
+        switch (nPilihMenu)
+            case 1 : 
+                display "Porsi sambal goreng kentang : "
+                accept nPorsi
+				nHarga = 3.000               
+				nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 2 : 
+                display "Porsi ayam goreng : "
+                accept nPorsi
+                nHarga = 10.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 3 :
+                display "Porsi sayur kangkung : "
+                accept nPorsi
+                nHarga = 3.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 4 :
+                display "Porsi telur dadar : "
+                accept nPorsi
+                nHarga = 4.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 5 :
+                display "Porsi ikan tuna balado : "
+                accept nPorsi
+                nHarga = 9.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 6 :
+                display "Porsi perkedel : "
+                accept nPorsi
+                nHarga = 2.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 7 :
+                display "Porsi sayur sop : "
+                accept nPorsi
+                nHarga = 3.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 8 :
+                display "Porsi nasi putih : "
+                accept nPorsi
+                nHarga = 3.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 9 :
+                display "Jumlah es teh : "
+                accept nPorsi
+                nHarga = 3.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+            case 10 :
+                display "Jumlah es jeruk : "
+                accept nPorsi
+                nHarga = 5.000
+                nSubtotal = nHarga * nPorsi
+                display "Subtotal = ", nSubtotal
+                nTotal = nTotal + nSubtotal
+            break;
+		default :
+			display "Pilihan Menu Tidak Ada"
+		break;
+        end
+end
+
+
+
+
+
+
